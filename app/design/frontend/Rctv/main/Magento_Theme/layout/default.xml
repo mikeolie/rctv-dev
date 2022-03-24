@@ -8,7 +8,12 @@
 <page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
   <body>
     <referenceContainer name="header.container">
-      <referenceBlock name="top.links" remove="true" />
+      <container name="header.left" label="headerLeft"  htmlTag="div" htmlClass="left-col" />
+      <container name="header.right" label="headerRight"  htmlTag="div" htmlClass="right-col" /> 
     </referenceContainer>
+    <move element="logo" destination="header.left" />
+    <move element="minicart" destination="header.right" />
+    <move element="top.links" destination="header.right" />
+    <move element="top.search" destination="header.right" />
   </body>
 </page>

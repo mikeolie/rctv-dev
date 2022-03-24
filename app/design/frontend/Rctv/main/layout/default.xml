@@ -11,4 +11,5 @@
     <container name="header.center" label="headerCenter" htmlTag="div" htmlClass="center.col" />
     <container name="header.right" label="headerRight" htmlTag="div" htmlClass="right.col" />
   </referenceContainer>
+  <<move element="logo" destination="header.center" />
 </page>

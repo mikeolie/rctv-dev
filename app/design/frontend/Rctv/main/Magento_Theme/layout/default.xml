@@ -7,6 +7,16 @@
 -->
 <page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
   <body>
+    <referenceBlock name="top.links">
+      <block class="Magento\Theme\Block\Html\Header" name="header" as="header" before="-">
+        <arguments>
+          <argument name="show_part" xsi:type="string"></argument>
+        </arguments>
+      </block>
+      <referenceBlock name="my-account-link" remove="true" />
+      <referenceBlock name="wish-list-link" remove="true" />
+    </referenceBlock>
+    <referenceBlock name="catalog.compare.link" remove="true" />
     <referenceContainer name="header.container">
       <container name="header.left" label="headerLeft"  htmlTag="div" htmlClass="left-col" />
       <container name="header.right" label="headerRight"  htmlTag="div" htmlClass="right-col" /> 

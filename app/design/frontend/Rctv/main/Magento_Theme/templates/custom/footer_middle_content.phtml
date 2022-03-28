@@ -1,0 +1,60 @@
+<?php $footer_links = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_links')->toHtml(); ?>
+<?php if ($footer_links) : ?>
+    <?= $footer_links; ?>
+<?php else : ?>
+    <div class="footer-middle-topinfo">
+        Due to fluctuations in precious metals prices, all prices are subject to change without notice.
+    </div>
+    <div class="footer-widgets">
+        <div class="footer-widget extra-50">
+            <div class="footer-widget-inner">
+                <h4 class="footer-title heading heading-h4"><span class="heading__inner"><?= _('Contact Us') ?></span></h4>
+                <?php
+                $footer_links_block = $block->getLayout()->createBlock('Magetno\Cms\Block\Block')->setBlockId('footer_links_block')->toHtml();
+                if ($footer_links_block) :
+                    echo $footer_links_block;
+                else :
+                    $contactEmail = 'info@rarecollectiblestv.com'
+                ?>
+                    <div class="columns-flex is-s-indent">
+                        <div class="column">
+                            <dl>
+                                <dt><?= _('Call Us') ?></dt>
+                                <dd><u>Place Order:</u><br><a href="tel:8002334145">(800) 233 - 4145</a><br>Monday - Sunday</dd>
+                                <dd><u>Customer Service</u><br><a href="tel:8005817273">(800) 581 - 7273</a> <br>Monday - Friday<br> 8:00am - 5:00pm PST</dd>
+                                <dd><u>Private Advisors:</u><br><a href="tel:8007780624">(800) 778 - 0624</a><br>Monday - Friday<br> 8:00am - 5:00pm PST</dd>
+                            </dl>
+                            <dl>
+                                <dt><?= _('Email') ?></dt>
+                                <dd><a href="mailto: <?= $contactEmail ?>"></a></dd>
+                            </dl>
+                        </div>
+                        <div class="column">
+                            <dl>
+                                <dt><?= _('Address') ?></dt>
+                                <dd>Address Goes Here</dd>
+                            </dl>
+                            <dl>
+                                <dt><?= _('Social') ?></dt>
+                                <dd>
+                                    <?php $social_links = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->toHtml();
+                                    if ($social_links) :
+                                        echo $social_links;
+                                    else :
+                                    ?>
+                                        <ul class="social-networks">
+                                            <li><a href="https://www.instagram.com/rarecollectiblestv/" target="_blank"><span class="fab fa-instagram"><em>Instagram</em></span></a></li>
+                                            <li><a href="https://www.facebook.com/rarecollectiblestv/" target="_blank"><span class="fab fa-facebook"><em>Facebook</em></span></a></li>
+                                            <li><a href="https://www.youtube.com/channel/UC9jW6L6_S6C5IYC_lvISg6Q" target="_blank"><span class="fab fa-youtube"><em>YouTube</em></span></a></li>
+                                        </ul>
+                                    <?php endif; ?>
+                                </dd>
+                            </dl>
+                            <img class="bbb-rating" src="<?= $block->getViewFileUrl('images') . '/bbb-rating.jpg'; ?>" alt="BBB Rating" />
+                        </div>
+                    </div>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>

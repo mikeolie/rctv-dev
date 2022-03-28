@@ -56,5 +56,47 @@
                 <?php endif; ?>
             </div>
         </div>
+        <div class="footer-widget">
+            <div class="footer-widget-inner">
+                <h4 class="footer-title heading heading-h4">
+                    <span class="heading_inner"><?= _('About RCTV') ?></span>
+                </h4>
+                <?php
+                $footer_links_block2 = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_links_blocks2')->toHtml();
+                if ($footer_links_block2) :
+                    echo $footer_links_block2;
+                else :
+                ?>
+                    <ul class="footer-nav">
+                        <li><a href="<?= $block->getUrl('about') ?>">Company</a></li>
+                        <li><a href="<?= $block->getUrl('about/hosts') ?>">Hosts</a></li>
+                        <li><a href="<?= $block->getUrl('about/pact') ?>">Private Advisory Coin Team</a></li>
+                        <li><a href="<?= $block->getUrl('about/showtimes') ?>">Showtimes</a></li>
+                        <li><a href="https://www.indeed.com/cmp/Rare-Collectibles-Tv-1?attributionid=adwebapp">Showtimes</a></a></li>
+                    </ul>
+                <?php endif; ?>
+            </div>
+        </div>
+        <div class="footer-widget">
+            <div class="footer-widget-inner">
+                <h4 class="footer-title heading heading-h4"><span class="heading__inner"><?= _('Additional Info') ?></span></h4>
+                <?php
+                $footer_links_block3 = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_links_block3')->toHtml();
+                if ($footer_links_block3) :
+                    echo $footer_links_block3;
+                else :
+                ?>
+                    <ul class="footer-nav">
+                        <li><a href="<?= $block->getUrl('privacy-policy') ?>">Privacy Policy</a></li>
+                        <li><a href="<?= $block->getUrl('return-policy') ?>">Return Policy</a></li>
+                        <li><a href="<?= $block->getUrl('terms-of-use') ?>">Terms Of Use</a></li>
+                        <li><a href="<?= $block->getUrl('terms-of-sale') ?>">Terms of Sale: Coins and Collectibles</a></li>
+                        <li><a href="<?= $block->getUrl('terms-of-sale-militaria') ?>">Terms of Sale: Militaria</a></li>
+                        <li><a href="<?= $block->getUrl('faq') ?>">FAQ</a></li>
+                        <li><a href="<?= $block->getUrl() ?>sitemap.html">Sitemap</a></li>
+                    </ul>
+                <?php endif; ?>
+            </div>
+        </div>
     </div>
 <?php endif; ?>

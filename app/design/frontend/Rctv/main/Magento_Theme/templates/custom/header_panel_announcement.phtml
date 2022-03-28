@@ -1,0 +1,6 @@
+<?php $header_announcement = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('header-panel-announcement')->toHtml(); ?>
+<?php if ($header_announcement) : ?>
+    <div class="announcement-wrapper">
+        <div class="announcement"><?= $header_announcement; ?></div>
+    </div>
+<?php endif; ?>

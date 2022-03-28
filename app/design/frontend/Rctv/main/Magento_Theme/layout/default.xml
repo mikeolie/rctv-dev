@@ -5,22 +5,76 @@
  * See COPYING.txt for license details.
  */
 -->
-<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page layout="3columns"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
   <body>
     <!-- Site Header -->
     <referenceContainer name="header.panel">
-      <block class="Magento\Framework\View\Element\Template" name="header.panel.contact" template="Magento_THeme::custom/header_panel_announcement.phtml" before="store_language" /> 
+      <block class="Magento\Framework\View\Element\Template" name="header.panel.contact" template="Magento_Theme::custom/header_panel_announcement.phtml" before="store_language" />
     </referenceContainer>
 
     <!-- Header Links -->
     <referenceContainer name="header-wrapper">
       <referenceBlock name="top.links">
         <referenceBlock name="catalog.compare.link" remove="true" />
-        <referenceBlock name="wish-list-link" remove="true" /> 
+        <referenceBlock name="wish-list-link" remove="true" />
       </referenceBlock>
 
       <referenceBlock name="currency" remove="true" />
       <referenceBlock name="store.settings.currency" remove="true" />
+
+      <!-- Header Logo -->
+      <referenceBlock name="logo">
+        <arguments>
+          <argument name="logo_file" xsi:type="string">images/rctv-logo.png</argument>
+          <argument name="logo_img_width" xsi:type="number">230</argument>
+          <argument name="logo_img_height" xsi:type="number">115</argument>
+        </arguments>
+      </referenceBlock>
+
+      <!-- Header Tag Line -->
+      <referenceContainer name="header-wrapper">
+        <block class="Magento\Framework\View\Element\Template" name="header.tagline" template="Magento_Theme::custom/header_tagline.phtml" after="logo" />
+      </referenceContainer>
+
+      <referenceBlock name="advanced-search-link" remove="true" />
+    </referenceContainer>
+
+    <!-- Site Wrapper -->
+    <referenceContainer name="page.wrapper">
+      <container name="main.content.wrapper" as="mainContentWrapper" label="Main Content Wrapper" htmlTag="div" htmlClass="page-main-wrapper" before="page.bottom.container">
+        <container name="page.main.header" label="Page Main Header" htmlTag="div" htmlClass="page-main-header" before="-">
+          <container name="page.main.header.inner" htmlTag="div" htmlClass="container-fluid" before="-">
+            <container name="page.main.header.container" htmlTag="div" htmlClass="page-main-header-container" before="-" />
+          </container>
+        </container>
+      </container>
+    </referenceContainer>
+
+    <move element="main.content" destination="main.content.wrapper" />
+    <move element="page.top" destination="page.top.wrapper" before="breadcrumbs" />
+    <move element="page.main.title" destination="page.main.title.wrapper" before="page.messages" />
+    <move element="breadcrumbs" destination="breadcrumbs.wrapper" />
+
+    <referenceContainer name="footer">
+      <!-- Footer Top -->
+      <container name="footer.top" as="footerTop" label="Footer Top"  htmlTag="div" htmlClass="clearfix footer-top">
+        <container name="footer.top.container" as="footerTopContainer" htmlTag="div" htmlClass="container-fluid">
+          <block class="Magento\Framework\View\Element\Template" name="footer.top.content" as="footerTopContent" template="Magento_Theme::custom/footer_top_content.phtml" />
+        </container>
+      </container>
+      <!-- Footer Middle -->
+      <container name="footer.middle" as="footerMiddle" label="Footer Middle" htmlTag="div" htmlClass="clearfix footer-middle">
+        <container name="footer.middle.container" as="footerMiddleContainer" htmlTag="div" htmlClass="container-fluid">
+          <block class="Magento\Framework\View\Element\Template" name="footer.middle.content" as="footerMiddleContent" template="Magento_Theme::custom/footer_middle_content.phtml" />
+        </container>
+      </container>
+      <!-- Footer Bottom -->
+      <container name="footer.bottom" as="footerBottom" label="Footer Bottom" htmlTag="div" htmlClass="clearfix footer-bottom">
+        <container name="footer.bottom.container" as="footerBottomContainer" htmlTag="div" htmlClass="container-fluid">
+          <block class="Magento\Framework\View\Element\Template" name="footer.bottom.content" as="footerBottomContent" template="Magento_Theme::custom/footer_bottom_content.phtml" />
+        </container>
+      </container>
     </referenceContainer>
   </body>
 </page>

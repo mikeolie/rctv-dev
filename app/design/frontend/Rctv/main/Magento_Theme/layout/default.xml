@@ -16,6 +16,7 @@
     <!-- Header Links -->
     <referenceContainer name="header-wrapper">
       <!-- Remove Header Links -->
+      <referenceBlock name="header.panel.wrapper" remove="true" />
       <referenceBlock name="top.links">
         <referenceBlock name="catalog.compare.link" remove="true" />
         <referenceBlock name="wish-list-link" remove="true" />
@@ -59,11 +60,16 @@
       </container>
     </referenceContainer>
 
+    <move element="top.links" destination="header-wrapper" after="top.search" />
     <move element="main.content" destination="main.content.wrapper" />
     <move element="page.top" destination="page.top.wrapper" before="breadcrumbs" />
     <move element="page.main.title" destination="page.main.title.wrapper" before="page.messages" />
     <move element="breadcrumbs" destination="breadcrumbs.wrapper" />
-
+    <referenceBlock name="footer_links" remove="true" />
+    <referenceBlock name="copyright" remove="true" />
+    <referenceBlock name="form.subscribe" remove="true" />
+    <referenceBlock name="report.bugs" remove="true" />
+    <!-- Footer Container -->
     <referenceContainer name="footer">
       <!-- Footer Top -->
       <container name="footer.top" as="footerTop" label="Footer Top" htmlTag="div" htmlClass="clearfix footer-top">

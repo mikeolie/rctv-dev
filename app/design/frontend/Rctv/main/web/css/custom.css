@@ -6,6 +6,29 @@
 }
 
 .header-left a.logo {
+    border-right: 1px solid #dfdfdf;
     margin: 0;
     padding-right: 10px;
+}
+
+h4.header-tagline-top {
+    font-family: libre baskerville, serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #c2a15c;
+    margin: 0;
+}
+
+h6.header-tagline-bottom {
+    font-family: libre baskerville, serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0;
+    width: 55%;
+    margin-top: 7px;
+}
+
+.header-tagline-wrapper {
+    padding-left: 6px;
 }

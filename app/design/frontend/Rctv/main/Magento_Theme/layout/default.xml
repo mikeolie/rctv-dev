@@ -15,23 +15,6 @@
 
     <!-- Header Links -->
     <referenceContainer name="header-wrapper">
-      <!-- Remove Header Links -->
-      <referenceBlock name="header.panel.wrapper" remove="true" />
-      <referenceBlock name="top.links">
-        <referenceBlock name="catalog.compare.link" remove="true" />
-        <referenceBlock name="wish-list-link" remove="true" />
-      </referenceBlock>
-
-      <referenceBlock name="currency" remove="true" />
-      <referenceBlock name="store.settings.currency" remove="true" />
-      <referenceBlock name="minicart" remove="true" />
-      <referenceBlock name="my-account-link" remove="true" />
-      <referenceBlock name="header">
-        <arguments>
-          <argument name="show_part" xsi:type="string"></argument>
-        </arguments>
-      </referenceBlock>
-
       <!-- Header Logo -->
       <referenceBlock name="logo">
         <arguments>
@@ -60,7 +43,16 @@
       </container>
     </referenceContainer>
 
-    <move element="top.links" destination="header-wrapper" after="top.search" />
+    <!-- Remove Header Links -->
+    <referenceBlock name="header.panel.wrapper" remove="true" />
+    <referenceBlock name="top.links" remove="true" />
+    <referenceBlock name="minicart" remove="true" />
+    <referenceBlock name="header">
+      <arguments>
+        <argument name="show_part" xsi:type="string"></argument>
+      </arguments>
+    </referenceBlock>
+
     <move element="main.content" destination="main.content.wrapper" />
     <move element="page.top" destination="page.top.wrapper" before="breadcrumbs" />
     <move element="page.main.title" destination="page.main.title.wrapper" before="page.messages" />

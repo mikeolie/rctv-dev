@@ -15,23 +15,14 @@
 
     <!-- Header Links -->
     <referenceContainer name="header-wrapper">
-      <!-- Header Logo -->
-      <referenceBlock name="logo">
-        <arguments>
-          <argument name="logo_file" xsi:type="string">images/rctv-logo.png</argument>
-          <argument name="logo_img_width" xsi:type="number">230</argument>
-          <argument name="logo_img_height" xsi:type="number">115</argument>
-        </arguments>
-      </referenceBlock>
-
       <!-- Header Tag Line -->
-      <referenceContainer name="header-wrapper">
-        <block class="Magento\Framework\View\Element\Template" name="header.tagline" template="Magento_Theme::custom/header_tagline.phtml" after="logo" />
-      </referenceContainer>
-
+      <container name="header.left" label="headerLeft" htmlTag="div" htmlClass="header-left" />
       <referenceBlock name="advanced-search-link" remove="true" />
     </referenceContainer>
 
+    <block class="Magento\Framework\View\Element\Template" name="header.tagline" template="Magento_Theme::custom/header_tagline.phtml" after="logo" />
+    <move element="header.tagline" destination="header.left" />
+    <move element="logo" destination="header.left" />
     <!-- Site Wrapper -->
     <referenceContainer name="page.wrapper">
       <container name="main.content.wrapper" as="mainContentWrapper" label="Main Content Wrapper" htmlTag="div" htmlClass="page-main-wrapper" before="page.bottom.container">

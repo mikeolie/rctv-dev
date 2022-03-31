@@ -138,3 +138,63 @@ h6.header-tagline-bottom {
     text-transform: uppercase;
     letter-spacing: 0.1rem;
 }
+
+.footer-about-us {
+    background-color: #ece6da;
+}
+
+div.footer {
+    margin: 0;
+    max-width: 100% !important;
+    padding: 0 !important;
+}
+
+.footer-about-us {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    align-content: center;
+    justify-content: center;
+    padding: 10px 0px;
+}
+
+.footer .clearfix.footer-top {
+    background-color: #ece6da;
+}
+
+.footer-logo img.brand-logo {
+    width: 100%;
+}
+
+.footer-logo {
+    width: 7%;
+    margin-right: 30px;
+}
+
+.footer-about-us .about-us {
+    font-size: 16px;
+    font-family: libre baskerville, serif;
+    font-style: italic;
+}
+
+.clearfix.footer-middle {
+    background: rgb(64, 92, 94);
+    background: linear-gradient( 180deg, rgba(90, 124, 126, 1) 0%, rgba(71, 99, 100, 1) 54%, rgba(31, 41, 42, 1) 100%);
+}
+
+h4.footer-title.heading.heading-h4 {
+    margin: 0;
+}
+
+.footer-widgets {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    align-content: center;
+    justify-content: center;
+    padding: 10px 0px;
+}

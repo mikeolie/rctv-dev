@@ -32,3 +32,73 @@ h6.header-tagline-bottom {
 .header-tagline-wrapper {
     padding-left: 6px;
 }
+
+.header.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.header-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.block.block-search {
+    float: none;
+    padding: 0;
+    width: 400px;
+    height: auto;
+}
+
+.login-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    width: 130px;
+    font-weight: bold;
+}
+
+.login-section h6 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.login-section a {
+    color: #a57612;
+    text-decoration: none;
+}
+
+.login-section a:first-child {
+    padding-right: 7px;
+}
+
+.login-section a:last-child {
+    padding-left: 7px;
+}
+
+.login-section span:first-child {
+    padding-right: 8px;
+}
+
+.login-section span:last-child {
+    padding-left: 3px;
+}
+
+.header-left .logo img {
+    width: auto;
+    height: 50px;
+}
+
+#login-text {
+    padding-right: 5px;
+}
+
+#register-text {
+    padding-left: 5px;
+}

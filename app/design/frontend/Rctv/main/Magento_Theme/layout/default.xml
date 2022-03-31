@@ -17,12 +17,18 @@
     <referenceContainer name="header-wrapper">
       <!-- Header Tag Line -->
       <container name="header.left" label="headerLeft" htmlTag="div" htmlClass="header-left" />
+      <container name="header.right" label="headerRight" htmlTag="div" htmlClass="header-right" />
       <referenceBlock name="advanced-search-link" remove="true" />
     </referenceContainer>
-
+    <!-- Header LEft -->
     <block class="Magento\Framework\View\Element\Template" name="header.tagline" template="Magento_Theme::custom/header_tagline.phtml" after="logo" />
     <move element="header.tagline" destination="header.left" />
     <move element="logo" destination="header.left" />
+
+    <!-- Header Right -->
+    <block class="Magento\Framework\View\Element\Template" name="header.auth" template="Magento_Theme::custom/header_auth.phtml" after="top.search" />
+    <move element="top.search" destination="header.right" />
+    <move element="header.auth" destination="header.right" />
     <!-- Site Wrapper -->
     <referenceContainer name="page.wrapper">
       <container name="main.content.wrapper" as="mainContentWrapper" label="Main Content Wrapper" htmlTag="div" htmlClass="page-main-wrapper" before="page.bottom.container">

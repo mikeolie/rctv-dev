@@ -5,6 +5,10 @@
     align-items: center;
 }
 
+.block-serch input {
+    border-radius: 10px;
+}
+
 .header-left a.logo {
     border-right: 1px solid #dfdfdf;
     margin: 0;
@@ -101,4 +105,36 @@ h6.header-tagline-bottom {
 
 #register-text {
     padding-left: 5px;
+}
+
+.rctv-nav {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+
+.rctv-nav ul {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.rctv-nav ul>li {
+    margin: 0;
+    font-family: libre baskerville, serif;
+    font-weight: 500;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }

@@ -20,7 +20,7 @@
       <container name="header.right" label="headerRight" htmlTag="div" htmlClass="header-right" />
       <referenceBlock name="advanced-search-link" remove="true" />
     </referenceContainer>
-    <!-- Header LEft -->
+    <!-- Header Left -->
     <block class="Magento\Framework\View\Element\Template" name="header.tagline" template="Magento_Theme::custom/header_tagline.phtml" after="logo" />
     <move element="header.tagline" destination="header.left" />
     <move element="logo" destination="header.left" />
@@ -32,6 +32,7 @@
     
     <!-- Main Nav -->
     <block class="Magento\Framework\View\Element\Template" name="main.nav" template="Magento_Theme::custom/header_main_nav.phtml" after="header-wrapper" />
+    <move element="main.nav" destination="header.container" />
 
     <!-- Site Wrapper -->
     <referenceContainer name="page.wrapper">

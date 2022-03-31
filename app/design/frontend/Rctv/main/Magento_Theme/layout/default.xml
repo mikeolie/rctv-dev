@@ -29,6 +29,10 @@
     <block class="Magento\Framework\View\Element\Template" name="header.auth" template="Magento_Theme::custom/header_auth.phtml" after="top.search" />
     <move element="top.search" destination="header.right" />
     <move element="header.auth" destination="header.right" />
+    
+    <!-- Main Nav -->
+    <block class="Magento\Framework\View\Element\Template" name="main.nav" template="Magento_Theme::custom/header_main_nav.phtml" after="header-wrapper" />
+
     <!-- Site Wrapper -->
     <referenceContainer name="page.wrapper">
       <container name="main.content.wrapper" as="mainContentWrapper" label="Main Content Wrapper" htmlTag="div" htmlClass="page-main-wrapper" before="page.bottom.container">

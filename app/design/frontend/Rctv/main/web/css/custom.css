@@ -191,10 +191,18 @@ h4.footer-title.heading.heading-h4 {
 .footer-widgets {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
     max-width: 1280px;
     margin: 0 auto;
-    align-content: center;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 10px 0px;
+}
+
+.footer-widgets header {
+    color: #ECD198;
+    font-family: libre baskerville, serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }

@@ -130,7 +130,7 @@ h6.header-tagline-bottom {
     justify-content: space-between;
 }
 
-.rctv-nav ul>li {
+.rctv-nav ul > li {
     margin: 0;
     font-family: libre baskerville, serif;
     font-weight: 500;
@@ -181,7 +181,12 @@ div.footer {
 
 .clearfix.footer-middle {
     background: rgb(64, 92, 94);
-    background: linear-gradient( 180deg, rgba(90, 124, 126, 1) 0%, rgba(71, 99, 100, 1) 54%, rgba(31, 41, 42, 1) 100%);
+    background: linear-gradient(
+        180deg,
+        rgba(90, 124, 126, 1) 0%,
+        rgba(71, 99, 100, 1) 54%,
+        rgba(31, 41, 42, 1) 100%
+    );
 }
 
 h4.footer-title.heading.heading-h4 {
@@ -198,11 +203,51 @@ h4.footer-title.heading.heading-h4 {
     padding: 10px 0px;
 }
 
+.footer-widgets .column {
+    color: white;
+}
+
 .footer-widgets header {
-    color: #ECD198;
+    color: #ecd198;
     font-family: libre baskerville, serif;
     font-weight: 500;
     font-size: 1.6rem;
+    margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
+}
+
+.footer-info article {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.column div {
+    display: flex;
+    justify-content: space-between;
+}
+
+article.address {
+    max-width: 220px;
+    line-height: 25px;
+}
+
+span.header {
+    color: #ecd198;
+    margin-bottom: 5px;
+}
+
+section.footer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+article.social-icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-links li {
+    padding-bottom: 5px;
 }

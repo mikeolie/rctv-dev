@@ -3,137 +3,43 @@
     <?= $footer_links; ?>
 <?php else : ?>
     <div class="footer-widgets">
-        <!-- <div class="footer-widget extra-50">
-            <div class="footer-widget-inner">
-                <h4 class="footer-title heading heading-h4"><span class="heading__inner"><?= _('Contact Us') ?></span></h4>
-                <?php
-                $footer_links_block = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_links_block')->toHtml();
-                if ($footer_links_block) :
-                    echo $footer_links_block;
-                else :
-                    $contactEmail = 'info@rarecollectiblestv.com'
-                ?>
-                    <div class="columns-flex is-s-indent">
-                        <div class="column">
-                            <dl>
-                                <dt><?= _('Call Us') ?></dt>
-                                <dd><u>Place Order:</u><br><a href="tel:8002334145">(800) 233 - 4145</a><br>Monday - Sunday</dd>
-                                <dd><u>Customer Service</u><br><a href="tel:8005817273">(800) 581 - 7273</a> <br>Monday - Friday<br> 8:00am - 5:00pm PST</dd>
-                                <dd><u>Private Advisors:</u><br><a href="tel:8007780624">(800) 778 - 0624</a><br>Monday - Friday<br> 8:00am - 5:00pm PST</dd>
-                            </dl>
-                            <dl>
-                                <dt><?= _('Email') ?></dt>
-                                <dd><a href="mailto: <?= $contactEmail ?>"></a></dd>
-                            </dl>
-                        </div>
-                        <div class="column">
-                            <dl>
-                                <dt><?= _('Address') ?></dt>
-                                <dd>Address Goes Here</dd>
-                            </dl>
-                            <dl>
-                                <dt><?= _('Social') ?></dt>
-                                <dd>
-                                    <?php $social_links = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->toHtml();
-                                    if ($social_links) :
-                                        echo $social_links;
-                                    else :
-                                    ?>
-                                        <ul class="social-networks">
-                                            <li><a href="https://www.instagram.com/rarecollectiblestv/" target="_blank"><span class="fab fa-instagram"><em>Instagram</em></span></a></li>
-                                            <li><a href="https://www.facebook.com/rarecollectiblestv/" target="_blank"><span class="fab fa-facebook"><em>Facebook</em></span></a></li>
-                                            <li><a href="https://www.youtube.com/channel/UC9jW6L6_S6C5IYC_lvISg6Q" target="_blank"><span class="fab fa-youtube"><em>YouTube</em></span></a></li>
-                                        </ul>
-                                    <?php endif; ?>
-                                </dd>
-                            </dl>
-                            <img class="bbb-rating" src="<?= $block->getViewFileUrl('images') . '/bbb-rating.jpg'; ?>" alt="BBB Rating" />
-                        </div>
-                    </div>
-                <?php endif; ?>
-            </div>
-        </div>
-        <div class="footer-widget">
-            <div class="footer-widget-inner">
-                <h4 class="footer-title heading heading-h4">
-                    <span class="heading_inner"><?= _('About RCTV') ?></span>
-                </h4>
-                <?php
-                $footer_links_block2 = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_links_blocks2')->toHtml();
-                if ($footer_links_block2) :
-                    echo $footer_links_block2;
-                else :
-                ?>
-                    <ul class="footer-nav">
-                        <li><a href="<?= $block->getUrl('about') ?>">Company</a></li>
-                        <li><a href="<?= $block->getUrl('about/hosts') ?>">Hosts</a></li>
-                        <li><a href="<?= $block->getUrl('about/pact') ?>">Private Advisory Coin Team</a></li>
-                        <li><a href="<?= $block->getUrl('about/showtimes') ?>">Showtimes</a></li>
-                        <li><a href="https://www.indeed.com/cmp/Rare-Collectibles-Tv-1?attributionid=adwebapp">Showtimes</a></a></li>
-                    </ul>
-                <?php endif; ?>
-            </div>
-        </div>
-        <div class="footer-widget">
-            <div class="footer-widget-inner">
-                <h4 class="footer-title heading heading-h4"><span class="heading__inner"><?= _('Additional Info') ?></span></h4>
-                <?php
-                $footer_links_block3 = $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_links_block3')->toHtml();
-                if ($footer_links_block3) :
-                    echo $footer_links_block3;
-                else :
-                ?>
-                    <ul class="footer-nav">
-                        <li><a href="<?= $block->getUrl('privacy-policy') ?>">Privacy Policy</a></li>
-                        <li><a href="<?= $block->getUrl('return-policy') ?>">Return Policy</a></li>
-                        <li><a href="<?= $block->getUrl('terms-of-use') ?>">Terms Of Use</a></li>
-                        <li><a href="<?= $block->getUrl('terms-of-sale') ?>">Terms of Sale: Coins and Collectibles</a></li>
-                        <li><a href="<?= $block->getUrl('terms-of-sale-militaria') ?>">Terms of Sale: Militaria</a></li>
-                        <li><a href="<?= $block->getUrl('faq') ?>">FAQ</a></li>
-                        <li><a href="<?= $block->getUrl() ?>sitemap.html">Sitemap</a></li>
-                    </ul>
-                <?php endif; ?>
-            </div>
-        </div> -->
         <div class="column">
             <header>Contact us Monday - Friday 10AM - 5PM</header>
             <div>
-                <section>
+                <section class="footer-info">
                     <article>
                         <span class="header">Phone</span>
                         800-581-7273
                     </article>
                     <article>
                         <span class="header">Social</span>
-                        <article>
-                            <span class="icon">Icon</span>
+                        <article class="social-icons">
+                            <i class="fas fa-clock"></i>
                             <span class="icon">Icon</span>
                             <span class="icon">Icon</span>
                         </article>
                     </article>
                 </section>
-                <section>
+                <section class="footer-info">
                     <article>
                         <span class="header">Email</span>
-                        800-581-7273
+                        info@rarecollectiblestv.com
                     </article>
-                    <span class="header">Address</span>
                     <article class="address">
-                        Rare Collectibles TV, LLC 21213-B Hawthorne Blvd, #344 Torrance, California 90503
+                        <span class="header">Address</span>
+                        Rare Collectibles TV, LLC <br /> 21213-B Hawthorne Blvd, #344 Torrance, California 90503
                     </article>
                 </section>
             </div>
         </div>
         <div class="column">
             <header>About RCTV</header>
-            <div>
-                <ul class="footer-links">
-                    <li>Company</li>
-                    <li>Hosts</li>
-                    <li>PACT</li>
-                    <li>Showtimes</li>
-                </ul>
-            </div>
+            <ul class="footer-links">
+                <li>Company</li>
+                <li>Hosts</li>
+                <li>PACT</li>
+                <li>Showtimes</li>
+            </ul>
         </div>
         <div class="column">
             <header>Additional Info</header>

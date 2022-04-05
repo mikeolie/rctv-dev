@@ -112,6 +112,7 @@ h6.header-tagline-bottom {
     display: flex;
     flex-direction: row;
     max-width: 100%;
+    background-color: #ece6da;
 }
 
 .rctv-nav ul {
@@ -124,7 +125,7 @@ h6.header-tagline-bottom {
     max-width: 1280px;
     padding-left: 20px;
     padding-right: 20px;
-    width: auto;
+    width: 100%;
     align-items: center;
     align-content: center;
     justify-content: space-between;
@@ -246,8 +247,28 @@ section.footer-info {
 article.social-icons {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .footer-links li {
     padding-bottom: 5px;
+}
+
+.social-icons li {
+    list-style: none;
+}
+
+a.social-icon {
+    color: white;
+    font-size: 19px;
+}
+
+.field.search .control {
+    border: none;
+}
+
+@media only screen and (min-width: 768px) {
+    span.action.nav-toggle {
+        display: none;
+    }
 }

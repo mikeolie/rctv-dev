@@ -18,7 +18,6 @@
       <!-- Header Tag Line -->
       <container name="header.left" label="headerLeft" htmlTag="div" htmlClass="header-left" />
       <container name="header.right" label="headerRight" htmlTag="div" htmlClass="header-right" />
-      <referenceBlock name="advanced-search-link" remove="true" />
     </referenceContainer>
     <!-- Header Left -->
     <block class="Magento\Framework\View\Element\Template" name="header.tagline" template="Magento_Theme::custom/header_tagline.phtml" after="logo" />

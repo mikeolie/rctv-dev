@@ -55,9 +55,9 @@
     </referenceBlock>
 
     <move element="main.content" destination="main.content.wrapper" />
-    <move element="page.top" destination="page.top.wrapper" before="breadcrumbs" />
     <move element="page.main.title" destination="page.main.title.wrapper" before="page.messages" />
     <move element="breadcrumbs" destination="breadcrumbs.wrapper" />
+    <referenceContainer name="page.top" remove="true" />
     <referenceBlock name="footer_links" remove="true" />
     <referenceBlock name="copyright" remove="true" />
     <referenceBlock name="form.subscribe" remove="true" />
